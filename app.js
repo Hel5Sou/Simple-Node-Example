@@ -1,8 +1,5 @@
-const rect = {
-    perimetr: (x, y) => 2 * (x + y),
-    area: (x, y) => x * y
-};
-
+const rect = require('./rectangle');
+// importing from the reactangle.js
 function solveRect(l, w) {
     console.log(`Solving for rectangle with dimension: ${1}, ${w}`);
 
@@ -13,8 +10,8 @@ function solveRect(l, w) {
         console.log(`Perimetr of rectangle: ${rect.perimetr(l, w)}`);
     }
 }
-
+// test the solveRect function
 solveRect(2, 4);
 solveRect(3, 5);
-solveRect(0, 5);
-solveRect(5, -3);
+solveRect(0, 5); // not working, because of 0
+solveRect(5, -3); // nor working, because of -3
